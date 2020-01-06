@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://greyhawk.github.io/categories/</loc>
+    <lastmod>2020-01-06T21:19:38+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://greyhawk.github.io/tags/hadoop/</loc>
+    <lastmod>2020-01-06T21:19:38+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://greyhawk.github.io/post/2020/01/06/hadoop-3.x-%E6%A6%82%E8%BF%B0/</loc>
     <lastmod>2020-01-06T21:19:38+08:00</lastmod>
   </url>
@@ -13,16 +23,18 @@
   </url>
   
   <url>
-    <loc>https://greyhawk.github.io/</loc>
+    <loc>https://greyhawk.github.io/tags/</loc>
     <lastmod>2020-01-06T21:19:38+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://greyhawk.github.io/categories/</loc>
+    <loc>https://greyhawk.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
+    <lastmod>2020-01-06T21:19:38+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://greyhawk.github.io/tags/</loc>
+    <loc>https://greyhawk.github.io/</loc>
+    <lastmod>2020-01-06T21:19:38+08:00</lastmod>
   </url>
   
 </urlset>
