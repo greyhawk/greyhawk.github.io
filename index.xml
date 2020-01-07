@@ -6,9 +6,20 @@
     <description>Recent content on 银河系漫游指南</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Mon, 06 Jan 2020 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://greyhawk.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>hadoop 3.x 概述</title>
+      <link>https://greyhawk.github.io/post/2020/01/06/hadoop-3.x-%E6%A6%82%E8%BF%B0/</link>
+      <pubDate>Mon, 06 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://greyhawk.github.io/post/2020/01/06/hadoop-3.x-%E6%A6%82%E8%BF%B0/</guid>
+      <description>实验环境安装 首先安装好 Docker 环境，后续的学习都是通过 Docker 进行,完成 Docker 安装后，通过 git clone 以下项目
+git clone https://github.com/big-data-europe/docker-hadoop.git </description>
+    </item>
     
   </channel>
 </rss>
