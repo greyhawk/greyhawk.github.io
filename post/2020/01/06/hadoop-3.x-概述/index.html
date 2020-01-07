@@ -37,7 +37,21 @@
 <h2 id="实验环境安装">实验环境安装</h2>
 <p>首先安装好 Docker 环境，后续的学习都是通过 Docker 进行,完成 Docker 安装后，通过 git clone 以下项目</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/big-data-europe/docker-hadoop.git
-</code></pre></div>
+</code></pre></div><p>进入目录</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd docker-hadoop
+</code></pre></div><p>通过 docker compose 启动容器</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker-compose up -d
+</code></pre></div><p>通过 docker compose 观察容器是否正常运行,如果有异常的容器，再执行一次启动容器</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker-compose ps
+</code></pre></div><p>现在 hadoop 伪分布环境已经运行起来了,后续我们会在该环境上做实验。接下来会介绍一下 hadoop 3 的架构</p>
+<h2 id="hadoop-架构">Hadoop 架构</h2>
+<p>Hadoop 主要由三个核心的组件构成 HDFS,MapReduce,YARN。HDFS作为分布式存储的基础解决方案，为所有的其他组件提供高可用、稳定而高效的数据存储服务。YARN作为资源的管理与调度框架，负责整个分布式集群资源的分配、动态调整、资源调度等，从而实现资源的高可用率。而 MapReduce
+是一种编程模式，主要用于大规模数据集（大于 1TB）的并行计算，Map（映射）、Reduce(归约)是其主要的思想。要学习 Hadoop 主要就从这三方面入手了解 HDFS 的原理及操作,熟悉 MapReduce 的编程范式,最后理解 YARN 的资源管理和调度的核心思想。</p>
+<figure>
+    <img src="http://blog.ilibrary.me/assets/img/hadoop%5Farchitecture.png"/> 
+</figure>
+
+
 </main>
 
   <footer>

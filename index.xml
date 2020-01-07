@@ -18,7 +18,12 @@
       
       <guid>https://greyhawk.github.io/post/2020/01/06/hadoop-3.x-%E6%A6%82%E8%BF%B0/</guid>
       <description>实验环境安装 首先安装好 Docker 环境，后续的学习都是通过 Docker 进行,完成 Docker 安装后，通过 git clone 以下项目
-git clone https://github.com/big-data-europe/docker-hadoop.git </description>
+git clone https://github.com/big-data-europe/docker-hadoop.git 进入目录
+cd docker-hadoop 通过 docker compose 启动容器
+docker-compose up -d 通过 docker compose 观察容器是否正常运行,如果有异常的容器，再执行一次启动容器
+docker-compose ps 现在 hadoop 伪分布环境已经运行起来了,后续我们会在该环境上做实验。接下来会介绍一下 hadoop 3 的架构
+Hadoop 架构 Hadoop 主要由三个核心的组件构成 HDFS,MapReduce,YARN。HDFS作为分布式存储的基础解决方案，为所有的其他组件提供高可用、稳定而高效的数据存储服务。YARN作为资源的管理与调度框架，负责整个分布式集群资源的分配、动态调整、资源调度等，从而实现资源的高可用率。而 MapReduce 是一种编程模式，主要用于大规模数据集（大于 1TB）的并行计算，Map（映射）、Reduce(归约)是其主要的思想。要学习 Hadoop 主要就从这三方面入手了解 HDFS 的原理及操作,熟悉 MapReduce 的编程范式,最后理解 YARN 的资源管理和调度的核心思想。
+  </description>
     </item>
     
   </channel>
