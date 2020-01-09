@@ -101,7 +101,18 @@ fsimage 后，会覆盖当前的 fsimage。因此只要有最新的 fsimage。 H
 </ul>
 <p>SecondaryNameNode 和 CheckPointNode 都是定期从 NameNode 获取元数据，并在本机进行合并，合并的过程并不能说很高效，并且快照时间也存在延迟，就跟魔兽世界服务器挤爆回档一个道理，恢复的数据不是最新的，而是之前某个时间节点的版本。因此 Hadoop 又增加了一个组件叫做 BackupNode， BackupNode 是在内存中维护了一份从 NameNode 同步过来的 fsimage, 同时它还从 NameNode 实时接收 edits 文件的日志流,并把它们持久化硬盘, BackupNode 会把收到的这些 edits 文件和内存中的 fsimage 文件进行合并，创建一份元数据备份。我们可以看见元数据备份从定期变成实时，从磁盘合并变成内存合并，因此 BackupNode 的实时性和合并效率都要比 CheckPointNode 高。所以后续的版本基本都会使用
 BackupNode 作元数据的备份。</p>
-<h4 id="fsimage">fsimage</h4>
+<h4 id="fsimage-和-editlog">fsimage 和 editlog</h4>
+<p>上面介绍 NameNode 维护的元数据的时候，屡次提到 fsimage 和 editlog 文件，我们就先介绍一下这两类文件：</p>
+<ul>
+<li>fsimage</li>
+</ul>
+<p>根据名称目测，我们大概能知道这是文件系统的镜像,fsimage 保存了最新的元数据检查点，包含了整个 HDFS 文件系统的所有目录和文件的信息，对于文件来说包含了数据块的描述信息、修改时间、访问时间等，对于目录来说包括修改时间、访问权限控制等。在 NameNode 启动的时候，就会加载最近的 fsimage 。</p>
+<ul>
+<li>editlog</li>
+</ul>
+<p>NameNode 启动后，HDFS 客户端执行的所有写操作都会被记录进 editlog 里面，再周期性的合并成新的 fsimage 文件。</p>
+<h4 id="hadoop-2-dot-x">Hadoop 2.x</h4>
+<p>Hadoop 2.x NameNode 就提供了高可用(HA)的架构。</p>
 
 </main>
 
