@@ -5,10 +5,6 @@
     <link>https://greyhawk.github.io/categories/</link>
     <description>Recent content in Categories on 银河系漫游指南</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    
-	<atom:link href="https://greyhawk.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>zh-cn</language><atom:link href="https://greyhawk.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
